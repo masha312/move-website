@@ -110,7 +110,7 @@ h1 {
 
 .panel-copy {
   margin: 0;
-  width: min(100%, 249px);
+  width: min(100%, 280px);
   font-size: 1.5rem;
   font-weight: 600;
   line-height: normal;
@@ -132,6 +132,13 @@ h1 {
   font-weight: inherit;
   line-height: inherit;
   letter-spacing: inherit;
+}
+
+.panel-pricing {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0;
 }
 
 .site-footer {
