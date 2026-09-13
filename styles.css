@@ -119,6 +119,7 @@ h1 {
   box-shadow: none;
   user-select: none;
   -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .demo-phone::after {
@@ -174,6 +175,13 @@ h1 {
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
   margin-top: 12px;
+}
+
+/* Decorative icons: keep the hold target on the button so a long press can't
+   open the image callout menu. */
+.demo-screen img {
+  pointer-events: none;
+  -webkit-user-drag: none;
 }
 
 .demo-workout {
