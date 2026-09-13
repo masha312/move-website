@@ -1246,7 +1246,7 @@ h1 {
   width: 19px;
   height: 19px;
   place-items: center;
-  border: 1.5px solid #0a84ff;
+  border: 1px solid #0a84ff;
   border-radius: 50%;
   color: transparent;
   background: #fff;
@@ -1389,6 +1389,7 @@ h1 {
   max-height: 76%;
   overflow-y: auto;
   padding: 10px;
+  padding-bottom: 15px;
   border-radius: 17px 17px 0 0;
   background: #f2f2f7;
   box-shadow: 0 -8px 28px rgb(0 0 0 / 8%);
@@ -1517,7 +1518,7 @@ h1 {
 }
 
 .custom-workout-icon-choice[aria-checked="true"] {
-  border: 1.5px solid #0a84ff;
+  border: 1px solid #0a84ff;
 }
 
 .custom-workout-icon-choice img {
