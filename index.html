@@ -238,13 +238,46 @@
 
       <section class="panel">
         <div class="panel-inner">
-          <figure class="panel-phone reveal">
-            <img
-              src="images/custom.png"
-              alt="Create a custom workout with name and icon"
-              width="560"
-              height="1167"
-            />
+          <figure class="panel-phone demo-phone custom-workout-demo-phone reveal" aria-label="Interactive demo for creating a custom workout">
+            <div class="demo-screen custom-workout-demo-screen" data-custom-workout-demo>
+              <div data-custom-workout-status></div>
+
+              <header class="custom-workout-editor-header">
+                <strong>edit workouts</strong>
+              </header>
+
+              <div class="custom-workout-editor-scroll" data-custom-workout-scroll>
+                <div class="workout-editor-grid" data-custom-workout-grid></div>
+              </div>
+
+              <div class="custom-workout-sheet-layer is-open" data-custom-workout-layer aria-hidden="false">
+                <button class="custom-workout-backdrop" type="button" data-custom-workout-cancel aria-label="Close new workout editor"></button>
+                <form class="custom-workout-sheet" data-custom-workout-form aria-labelledby="custom-workout-title">
+                  <header class="custom-workout-sheet-header">
+                    <button class="custom-workout-sheet-button" type="button" data-custom-workout-cancel aria-label="Cancel">
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
+                    </button>
+                    <h3 id="custom-workout-title">new workout</h3>
+                    <button class="custom-workout-sheet-button is-save" type="submit" data-custom-workout-save aria-label="Save workout" disabled>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5.5 12.5 4 4 9-10" /></svg>
+                    </button>
+                  </header>
+
+                  <input
+                    class="custom-workout-name"
+                    type="text"
+                    data-custom-workout-name
+                    placeholder="workout name"
+                    aria-label="Workout name"
+                    autocomplete="off"
+                    autocapitalize="words"
+                  />
+                  <div class="custom-workout-icon-grid" data-custom-workout-icons role="radiogroup" aria-label="Workout illustration"></div>
+                </form>
+              </div>
+
+              <p class="visually-hidden" aria-live="polite" data-custom-workout-announcement></p>
+            </div>
           </figure>
           <p class="panel-copy reveal">create a workout of your own</p>
         </div>
@@ -265,5 +298,6 @@
     <script src="calendar-demo.js"></script>
     <script src="stats-demo.js"></script>
     <script src="workout-editor-demo.js"></script>
+    <script src="custom-workout-demo.js"></script>
   </body>
 </html>

@@ -184,6 +184,15 @@ h1 {
   -webkit-user-drag: none;
 }
 
+/* Typable fields opt back out: they need a caret, selection, and the paste
+   callout that the demo frame suppresses for its icons. */
+.demo-screen input,
+.demo-screen textarea {
+  user-select: text;
+  -webkit-user-select: text;
+  -webkit-touch-callout: default;
+}
+
 .demo-workout {
   --hold-progress: 0deg;
   position: relative;
@@ -1287,6 +1296,237 @@ h1 {
   transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
+/* Custom workout demo */
+.custom-workout-demo-screen {
+  padding: 0;
+}
+
+.custom-workout-demo-screen > .demo-status {
+  position: absolute;
+  z-index: 8;
+  top: 10px;
+  right: 16px;
+  left: 16px;
+}
+
+.custom-workout-editor-header {
+  position: absolute;
+  z-index: 4;
+  top: 39px;
+  right: 0;
+  left: 0;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  padding: 0 11px 8px;
+  background: linear-gradient(#f2f2f7 68%, rgb(242 242 247 / 0%));
+}
+
+.custom-workout-editor-header strong {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.custom-workout-editor-scroll {
+  position: absolute;
+  inset: 39px 0 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  padding: 40px 10px 18px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.custom-workout-editor-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-workout-add-tile {
+  border: 1px dashed rgb(60 60 67 / 24%);
+  color: #85858b;
+  background: rgb(255 255 255 / 74%);
+  font-weight: 500;
+}
+
+.custom-workout-add-tile svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 1.5;
+}
+
+.custom-workout-sheet-layer {
+  position: absolute;
+  z-index: 20;
+  inset: 0;
+  pointer-events: none;
+}
+
+.custom-workout-sheet-layer.is-open {
+  pointer-events: auto;
+}
+
+.custom-workout-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: rgb(0 0 0 / 15%);
+  opacity: 0;
+  transition: opacity 240ms ease;
+}
+
+.custom-workout-sheet {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 55%;
+  max-height: 76%;
+  overflow-y: auto;
+  padding: 10px;
+  border-radius: 17px 17px 0 0;
+  background: #f2f2f7;
+  box-shadow: 0 -8px 28px rgb(0 0 0 / 8%);
+  transform: translateY(102%);
+  transition: transform 320ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.custom-workout-sheet-layer.is-open .custom-workout-backdrop {
+  opacity: 1;
+}
+
+.custom-workout-sheet-layer.is-open .custom-workout-sheet {
+  transform: translateY(0);
+}
+
+.custom-workout-sheet-header {
+  display: grid;
+  grid-template-columns: 25px 1fr 25px;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 9px;
+}
+
+.custom-workout-sheet-header h3 {
+  margin: 0;
+  font-size: 8px;
+  font-weight: 650;
+  line-height: 1;
+  text-align: center;
+}
+
+.custom-workout-sheet-button {
+  display: grid;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  color: #111;
+  background: rgb(255 255 255 / 90%);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 4%);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.custom-workout-sheet-button svg {
+  width: 12px;
+  height: 12px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.custom-workout-sheet-button.is-save {
+  color: #fff;
+  background: #0a84ff;
+}
+
+.custom-workout-sheet-button:disabled {
+  color: #aaaab0;
+  background: #e2e2e7;
+  box-shadow: none;
+  cursor: default;
+  opacity: 0.78;
+}
+
+.custom-workout-sheet-button:not(:disabled):active,
+.custom-workout-icon-choice:active {
+  transform: scale(0.97);
+}
+
+.custom-workout-sheet-button:focus-visible,
+.custom-workout-icon-choice:focus-visible {
+  outline: 2px solid #087cff;
+  outline-offset: 2px;
+}
+
+.custom-workout-name {
+  display: block;
+  width: 100%;
+  height: 31px;
+  margin-bottom: 10px;
+  padding: 0 9px;
+  border: 0;
+  border-radius: 9px;
+  outline: none;
+  color: #111;
+  background: #fff;
+  font: inherit;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.custom-workout-name:focus {
+  outline: none;
+}
+
+.custom-workout-name::placeholder {
+  color: #b1b1b7;
+  opacity: 1;
+}
+
+.custom-workout-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+  padding: 1px;
+}
+
+.custom-workout-icon-choice {
+  display: grid;
+  aspect-ratio: 1;
+  min-width: 0;
+  padding: 0;
+  place-items: center;
+  border: 1px solid rgb(60 60 67 / 7%);
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.custom-workout-icon-choice[aria-checked="true"] {
+  border: 1.5px solid #0a84ff;
+}
+
+.custom-workout-icon-choice img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  opacity: 0.58;
+}
+
 @keyframes demo-particle {
   from {
     opacity: var(--particle-opacity);
@@ -1514,6 +1754,9 @@ h1 {
   }
 
   .panel-copy {
+    /* A definite basis keeps every panel the same total width, so the phones
+       share one vertical axis even when a caption fits on a single line. */
+    flex: 0 0 280px;
     text-align: left;
   }
 
@@ -1573,6 +1816,19 @@ h1 {
   .workout-editor-header button,
   .workout-editor-tile,
   .workout-editor-edit-button {
+    transition: none;
+  }
+
+  .custom-workout-backdrop {
+    transition: opacity 160ms ease;
+  }
+
+  .custom-workout-sheet {
+    transition: none;
+  }
+
+  .custom-workout-sheet-button,
+  .custom-workout-icon-choice {
     transition: none;
   }
 
