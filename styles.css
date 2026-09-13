@@ -298,7 +298,7 @@ h1 {
   stroke: currentColor;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-width: 1.8;
+  stroke-width: 1.2;
 }
 
 .demo-tabs {
@@ -488,7 +488,7 @@ h1 {
   stroke: currentColor;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-width: 1.5;
+  stroke-width: 1.2;
 }
 
 .calendar-day.is-expanded .calendar-chevron {
@@ -607,7 +607,7 @@ h1 {
   stroke: currentColor;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-width: 1.5;
+  stroke-width: 1.2;
 }
 
 .calendar-toolbar {
@@ -1259,7 +1259,7 @@ h1 {
   stroke: currentColor;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-width: 2;
+  stroke-width: 1.5px;
 }
 
 .workout-editor-tile[aria-pressed="true"] .workout-editor-toggle {
@@ -1355,7 +1355,7 @@ h1 {
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
-  stroke-width: 1.5;
+  stroke-width: 1.2;
 }
 
 .custom-workout-sheet-layer {
@@ -1444,7 +1444,7 @@ h1 {
   stroke: currentColor;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-width: 1.8;
+  stroke-width: 1.2;
 }
 
 .custom-workout-sheet-button.is-save {
