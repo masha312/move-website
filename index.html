@@ -20,13 +20,72 @@
     <main class="landing">
       <section class="panel">
         <div class="panel-inner">
-          <figure class="panel-phone reveal">
-            <img
-              src="images/log.png"
-              alt="move app home screen with one-tap workout logging"
-              width="560"
-              height="1167"
-            />
+          <figure class="panel-phone demo-phone reveal" aria-label="Interactive demo of the move app workout screen">
+            <div class="demo-screen">
+              <div class="demo-status" aria-hidden="true">
+                <span>3:12</span>
+                <span class="demo-island"></span>
+                <svg width="78" height="13" viewBox="0 0 78 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M19.2 1.53301C19.2 0.899963 18.7224 0.38678 18.1333 0.38678H17.0667C16.4776 0.38678 16 0.899963 16 1.53301V11.467C16 12.1 16.4776 12.6132 17.0667 12.6132H18.1333C18.7224 12.6132 19.2 12.1 19.2 11.467V1.53301ZM11.7659 2.83206H12.8326C13.4217 2.83206 13.8992 3.35756 13.8992 4.0058V11.4395C13.8992 12.0877 13.4217 12.6132 12.8326 12.6132H11.7659C11.1768 12.6132 10.6992 12.0877 10.6992 11.4395V4.0058C10.6992 3.35756 11.1768 2.83206 11.7659 2.83206ZM7.43411 5.48111H6.36745C5.77834 5.48111 5.30078 6.0133 5.30078 6.66979V11.4245C5.30078 12.081 5.77834 12.6132 6.36745 12.6132H7.43411C8.02322 12.6132 8.50078 12.081 8.50078 11.4245V6.66979C8.50078 6.0133 8.02322 5.48111 7.43411 5.48111ZM2.13333 7.9264H1.06667C0.477563 7.9264 0 8.45099 0 9.0981V11.4415C0 12.0886 0.477563 12.6132 1.06667 12.6132H2.13333C2.72244 12.6132 3.2 12.0886 3.2 11.4415V9.0981C3.2 8.45099 2.72244 7.9264 2.13333 7.9264Z" fill="black" style="fill:black;fill-opacity:1;"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M34.7713 2.80216C37.2584 2.80226 39.6504 3.72435 41.4529 5.37783C41.5887 5.50548 41.8056 5.50387 41.9393 5.37422L43.2368 4.11075C43.3045 4.04499 43.3422 3.95591 43.3417 3.86323C43.3411 3.77055 43.3023 3.68191 43.2338 3.61691C38.5028 -0.757802 31.0391 -0.757802 26.3081 3.61691C26.2395 3.68186 26.2007 3.77047 26.2 3.86316C26.1994 3.95584 26.2371 4.04494 26.3047 4.11075L27.6026 5.37422C27.7362 5.50407 27.9533 5.50568 28.0889 5.37783C29.8917 3.72424 32.284 2.80215 34.7713 2.80216ZM34.768 7.02243C36.1253 7.02235 37.4342 7.53409 38.4403 8.45822C38.5764 8.58937 38.7907 8.58653 38.9234 8.45181L40.2107 7.1325C40.2785 7.0633 40.3161 6.96942 40.3151 6.87187C40.3141 6.77432 40.2746 6.68124 40.2055 6.61345C37.1416 3.7226 32.3969 3.7226 29.3331 6.61345C29.2639 6.68124 29.2244 6.77437 29.2235 6.87195C29.2225 6.96953 29.2603 7.0634 29.3282 7.1325L30.6151 8.45181C30.7478 8.58653 30.9622 8.58937 31.0982 8.45822C32.1037 7.5347 33.4115 7.023 34.768 7.02243ZM37.2924 9.81599C37.2943 9.92134 37.2572 10.0229 37.1899 10.0967L35.0133 12.5514C34.9495 12.6236 34.8625 12.6642 34.7717 12.6642C34.6809 12.6642 34.594 12.6236 34.5301 12.5514L32.3531 10.0967C32.2859 10.0229 32.2489 9.92125 32.2509 9.8159C32.2529 9.71055 32.2937 9.61079 32.3637 9.54017C33.7538 8.22628 35.7897 8.22628 37.1798 9.54017C37.2497 9.61084 37.2905 9.71064 37.2924 9.81599Z" fill="black" style="fill:black;fill-opacity:1;"/>
+                  <rect opacity="0.35" x="50.8417" y="0.5" width="24" height="12" rx="3.8" stroke="black" style="stroke:black;stroke-opacity:1;"/>
+                  <path opacity="0.4" d="M76.3417 4.78113V8.8566C77.1464 8.51143 77.6697 7.70847 77.6697 6.81886C77.6697 5.92926 77.1464 5.1263 76.3417 4.78113" fill="black" style="fill:black;fill-opacity:1;"/>
+                  <rect x="52.3417" y="2" width="21" height="9" rx="2.5" fill="black" style="fill:black;fill-opacity:1;"/>
+                  </svg>
+
+              </div>
+
+              <div class="demo-grid">
+                <button class="demo-workout" type="button" data-workout="walking">
+                  <span class="demo-workout-progress"></span>
+                  <img src="images/workout-walking.svg" alt="" />
+                  <span>walking</span>
+                </button>
+                <button class="demo-workout" type="button" data-workout="running">
+                  <span class="demo-workout-progress"></span>
+                  <img src="images/workout-running.svg" alt="" />
+                  <span>running</span>
+                </button>
+                <button class="demo-workout" type="button" data-workout="strength">
+                  <span class="demo-workout-progress"></span>
+                  <img src="images/workout-lifting.svg" alt="" />
+                  <span>strength</span>
+                </button>
+                <button class="demo-workout" type="button" data-workout="yoga">
+                  <span class="demo-workout-progress"></span>
+                  <img src="images/workout-yoga.svg" alt="" />
+                  <span>yoga</span>
+                </button>
+                <button class="demo-workout" type="button" data-workout="cycling">
+                  <span class="demo-workout-progress"></span>
+                  <img src="images/workout-biking.svg" alt="" />
+                  <span>cycling</span>
+                </button>
+                <button class="demo-workout" type="button" data-workout="pilates">
+                  <span class="demo-workout-progress"></span>
+                  <img src="images/workout-pilates.svg" alt="" />
+                  <span>pilates</span>
+                </button>
+              </div>
+
+              <div class="demo-toolbar" aria-hidden="true">
+                <span class="demo-edit">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 7h9m4 0h3M4 12h3m4 0h9M4 17h9m4 0h3" />
+                    <circle cx="15" cy="7" r="2" />
+                    <circle cx="9" cy="12" r="2" />
+                    <circle cx="15" cy="17" r="2" />
+                  </svg>
+                </span>
+                <span class="demo-tabs">
+                  <b><img src="images/tab-check.svg" alt="" /></b>
+                  <i><img src="images/tab-calendar.svg" alt="" /></i>
+                  <i><img src="images/tab-stats.svg" alt="" /></i>
+                  <i><img src="images/tab-settings.svg" alt="" /></i>
+                </span>
+              </div>
+              <p class="visually-hidden" aria-live="polite" data-demo-status></p>
+            </div>
           </figure>
           <div class="panel-copy reveal">
             <h1>move — a lighter way to track your workouts</h1>
@@ -53,13 +112,49 @@
 
       <section class="panel">
         <div class="panel-inner">
-          <figure class="panel-phone reveal">
-            <img
-              src="images/calendar.png"
-              alt="Calendar view with notes and workouts for a day"
-              width="560"
-              height="1167"
-            />
+          <figure class="panel-phone demo-phone calendar-demo-phone reveal" aria-label="Interactive demo of the move app calendar">
+            <div class="demo-screen calendar-demo-screen" data-calendar-demo>
+              <div data-calendar-status></div>
+
+              <button class="calendar-sticky-header" type="button" tabindex="-1">july 2026</button>
+
+              <div class="calendar-scroll" data-calendar-scroll>
+                <h2 class="calendar-month-title">july 2026</h2>
+                <div class="calendar-days" data-calendar-days></div>
+              </div>
+
+              <div class="calendar-toolbar" aria-hidden="true">
+                <span class="demo-tabs">
+                  <i><img src="images/tab-check.svg" alt="" /></i>
+                  <b><img src="images/tab-calendar.svg" alt="" /></b>
+                  <i><img src="images/tab-stats.svg" alt="" /></i>
+                  <i><img src="images/tab-settings.svg" alt="" /></i>
+                </span>
+              </div>
+
+              <div class="calendar-sheet-layer" data-calendar-sheet-layer hidden>
+                <button class="calendar-sheet-backdrop" type="button" data-calendar-sheet-dismiss aria-label="Close"></button>
+                <section class="calendar-sheet" role="dialog" aria-modal="true" aria-labelledby="calendar-sheet-title">
+                  <header class="calendar-sheet-header">
+                    <h3 id="calendar-sheet-title" data-calendar-sheet-title></h3>
+                    <button class="calendar-sheet-close" type="button" data-calendar-sheet-close aria-label="Close">×</button>
+                  </header>
+                  <div class="calendar-workout-picker" data-calendar-workout-picker></div>
+                </section>
+              </div>
+
+              <div class="calendar-sheet-layer" data-note-sheet-layer hidden>
+                <button class="calendar-sheet-backdrop" type="button" data-note-cancel aria-label="Cancel"></button>
+                <section class="calendar-sheet calendar-note-sheet" role="dialog" aria-modal="true" aria-labelledby="note-sheet-title">
+                  <header class="calendar-sheet-header calendar-note-header">
+                    <button class="calendar-sheet-close" type="button" data-note-cancel aria-label="Cancel">×</button>
+                    <h3 id="note-sheet-title" data-note-sheet-title></h3>
+                    <button class="calendar-note-save" type="button" data-note-save aria-label="Save note">✓</button>
+                  </header>
+                  <textarea data-note-input aria-label="Note"></textarea>
+                </section>
+              </div>
+            </div>
           </figure>
           <p class="panel-copy reveal">add workouts and notes to any day</p>
         </div>
@@ -67,13 +162,32 @@
 
       <section class="panel">
         <div class="panel-inner">
-          <figure class="panel-phone reveal">
-            <img
-              src="images/patterns.png"
-              alt="Activity rhythms with sparklines for each workout"
-              width="560"
-              height="1167"
-            />
+          <figure class="panel-phone demo-phone stats-demo-phone reveal" aria-label="Interactive demo of move workout statistics">
+            <div class="demo-screen stats-demo-screen" data-stats-demo>
+              <div data-stats-status></div>
+
+              <div class="stats-sticky-header" data-stats-sticky-title></div>
+
+              <div class="stats-scroll" data-stats-scroll>
+                <h2 class="stats-date-title" data-stats-date-title></h2>
+                <div class="stats-range-picker" role="group" aria-label="History range">
+                  <button type="button" data-stats-range="month" aria-pressed="true">1M</button>
+                  <button type="button" data-stats-range="sixMonths" aria-pressed="false">6M</button>
+                  <button type="button" data-stats-range="year" aria-pressed="false">1Y</button>
+                  <button type="button" data-stats-range="allTime" aria-pressed="false">All</button>
+                </div>
+                <div class="stats-cards" data-stats-cards></div>
+              </div>
+
+              <div class="stats-toolbar" aria-hidden="true">
+                <span class="demo-tabs">
+                  <i><img src="images/tab-check.svg" alt="" /></i>
+                  <i><img src="images/tab-calendar.svg" alt="" /></i>
+                  <b><img src="images/tab-stats.svg" alt="" /></b>
+                  <i><img src="images/tab-settings.svg" alt="" /></i>
+                </span>
+              </div>
+            </div>
           </figure>
           <p class="panel-copy reveal">see your rhythms over time</p>
         </div>
@@ -81,13 +195,42 @@
 
       <section class="panel">
         <div class="panel-inner">
-          <figure class="panel-phone reveal">
-            <img
-              src="images/edit.png"
-              alt="Choose which workouts appear in your list"
-              width="560"
-              height="1167"
-            />
+          <figure class="panel-phone demo-phone workout-editor-demo-phone reveal" aria-label="Interactive demo for choosing which workouts to track">
+            <div class="demo-screen workout-editor-demo-screen" data-workout-editor-demo>
+              <div data-workout-editor-status></div>
+
+              <section class="workout-editor-view is-active" data-workout-editor-view aria-label="Edit workouts">
+                <header class="workout-editor-header">
+                  <strong>edit workouts</strong>
+                  <button type="button" data-workout-editor-done>done</button>
+                </header>
+                <div class="workout-editor-scroll" data-workout-editor-scroll>
+                  <div class="workout-editor-grid" data-workout-editor-grid></div>
+                </div>
+              </section>
+
+              <section class="workout-complete-view" data-workout-complete-view aria-label="Complete a workout" aria-hidden="true">
+                <div class="demo-grid workout-editor-complete-grid" data-workout-complete-grid></div>
+                <div class="demo-toolbar workout-editor-toolbar">
+                  <button class="demo-edit workout-editor-edit-button" type="button" data-workout-editor-open aria-label="Edit workouts">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M4 7h9m4 0h3M4 12h3m4 0h9M4 17h9m4 0h3" />
+                      <circle cx="15" cy="7" r="2" />
+                      <circle cx="9" cy="12" r="2" />
+                      <circle cx="15" cy="17" r="2" />
+                    </svg>
+                  </button>
+                  <span class="demo-tabs" aria-hidden="true">
+                    <b><img src="images/tab-check.svg" alt="" /></b>
+                    <i><img src="images/tab-calendar.svg" alt="" /></i>
+                    <i><img src="images/tab-stats.svg" alt="" /></i>
+                    <i><img src="images/tab-settings.svg" alt="" /></i>
+                  </span>
+                </div>
+              </section>
+
+              <p class="visually-hidden" aria-live="polite" data-workout-editor-announcement></p>
+            </div>
           </figure>
           <p class="panel-copy reveal">choose what you track</p>
         </div>
@@ -117,5 +260,10 @@
       </div>
     </footer>
     <script src="reveal.js"></script>
+    <script src="demo-data.js"></script>
+    <script src="demo.js"></script>
+    <script src="calendar-demo.js"></script>
+    <script src="stats-demo.js"></script>
+    <script src="workout-editor-demo.js"></script>
   </body>
 </html>
