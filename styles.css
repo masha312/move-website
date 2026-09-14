@@ -13,6 +13,10 @@
   --border: hsl(0, 0%, 93%);
   --max-width: 1080px;
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Must stay under the resting clearance above each demo's first line of
+     text, so nothing looks washed out at scrollTop 0. */
+  --demo-scroll-fade: 14px;
 }
 
 body {
@@ -351,6 +355,8 @@ h1 {
   overscroll-behavior: contain;
   scrollbar-width: none;
   padding: 8px 12px 61px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 var(--demo-scroll-fade));
+  mask-image: linear-gradient(to bottom, transparent 0, #000 var(--demo-scroll-fade));
   -webkit-overflow-scrolling: touch;
 }
 
@@ -823,6 +829,8 @@ h1 {
   overscroll-behavior: contain;
   scrollbar-width: none;
   padding: 15px 12px 61px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 var(--demo-scroll-fade));
+  mask-image: linear-gradient(to bottom, transparent 0, #000 var(--demo-scroll-fade));
   -webkit-overflow-scrolling: touch;
 }
 
